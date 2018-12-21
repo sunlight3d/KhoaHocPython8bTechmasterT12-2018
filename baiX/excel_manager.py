@@ -27,5 +27,6 @@ class ExcelManager:
 			self.first_sheet['B{}'.format(row_number)] = user.email
 			self.first_sheet['C{}'.format(row_number)] = user.phone
 			self.first_sheet['D{}'.format(row_number)] = user.website
+			self.first_sheet['E{}'.format(row_number)] = '=CONCATENATE(C{},D{})'.format(row_number, row_number)
 			row_number = row_number + 1			
 		self.workbook.save(self.filename)
