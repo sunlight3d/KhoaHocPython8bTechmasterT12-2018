@@ -10,7 +10,7 @@ class ExcelManager:
 			self.workbook = load_workbook(filename)
 			first_sheet_name = self.workbook.sheetnames[0]
 			self.first_sheet = self.workbook[first_sheet_name]			
-		except Error as err:
+		except Exception as err:
 			self.first_sheet = None
 			print("Error loading workbook: {0}".format(err))
 	def fill_data_to_first_sheet(self, users):
