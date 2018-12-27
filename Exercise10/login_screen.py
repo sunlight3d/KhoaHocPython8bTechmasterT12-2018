@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from product_screen import ProductScreen
+from fake_data import *
 class LoginScreen:	
 	def __init__(self,):
 		super().__init__()	
@@ -50,8 +51,18 @@ class LoginScreen:
 		# alert = QMessageBox()
 		# alert.setText('You clicked Login!')
 		# alert.exec_()
-		self.window.close()
-		product_screen = ProductScreen()
-	
+		if(self.login_user()):
+			self.window.close()
+			self.product_screen = ProductScreen()
+		else:
+			alert.setText('Wrong email and password')
+			
+	def login_user(self):
+		email = self.txtEmail.text.strip()
+		password = self.txtPassword.text.strip()
+		for fake_user in fake_users:
+			if(fake_user['email'] == email and fake_user['password'] == password):
+				return True
+		return False
 	def to_string(self):
 		pass
