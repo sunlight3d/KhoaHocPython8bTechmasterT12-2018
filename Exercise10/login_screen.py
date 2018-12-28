@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from product_screen import ProductScreen
+from fake_data import *
 class LoginScreen:	
 	def __init__(self,):
 		super().__init__()	
@@ -25,12 +26,14 @@ class LoginScreen:
 		self.hbox.addWidget(self.label_logo)
 
 		self.txtEmail = QLineEdit()			
-		self.txtEmail.setPlaceholderText('Enter email')
-		
+		self.txtEmail.setPlaceholderText('Enter email')		
 
 		self.txtPassword = QLineEdit()
 		self.txtPassword.setPlaceholderText('Enter password')
 		self.txtPassword.setEchoMode(QLineEdit.Password)
+
+		self.txtEmail.setText('hoang123@gmail.com')
+		self.txtPassword.setText('123456')
 
 		self.buttonLogin = QPushButton('Login')
 		self.buttonLogin.clicked.connect(self.on_login_clicked)
@@ -50,8 +53,20 @@ class LoginScreen:
 		# alert = QMessageBox()
 		# alert.setText('You clicked Login!')
 		# alert.exec_()
-		self.window.close()
-		product_screen = ProductScreen()
-	
+		if(self.login_user()):
+			self.window.close()
+			self.product_screen = ProductScreen()
+		else:
+			alert = QMessageBox()
+			alert.setText('Wrong email and password')
+			alert.exec_()
+			
+	def login_user(self):
+		email = self.txtEmail.text().strip()
+		password = self.txtPassword.text().strip()
+		for fake_user in fake_users:
+			if(fake_user['email'] == email and fake_user['password'] == password):
+				return True
+		return False
 	def to_string(self):
 		pass
