@@ -22,6 +22,11 @@ class ProductScreen:
         self.hbox.addWidget(self.label_select_category)
         self.hbox.addWidget(self.comboBox)
         self.hbox.addStretch(1)
+        self.btn_add_product = QPushButton('Add new Product')
+        self.hbox.addWidget(self.btn_add_product)
+        self.btn_add_product.clicked.connect(self.on_add_product)
+
+        self.hbox.addStretch(9)        
         vbox.addLayout(self.hbox)
 
         self.tableWidget = QTableWidget()        
@@ -57,10 +62,10 @@ class ProductScreen:
                 if(fake_product["category"] == self.current_category):
                     filtered_products.append(fake_product)
             self.fetch_data_to_table(filtered_products)
-    def on_login_clicked(self):
+    def on_add_product(self):
         alert = QMessageBox()
-        alert.setText('You clicked Login!')
-        alert.exec_()
+        alert.setText('You clicked Add')
+        alert.exec_()    
     def to_string(self):
         pass
             
