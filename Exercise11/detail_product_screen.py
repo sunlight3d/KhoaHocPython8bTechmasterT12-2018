@@ -32,9 +32,15 @@ class DetailProductScreen:
         grid.addWidget(lblCompany, 3, 0)
         grid.addWidget(self.companyEdit, 3, 1)
         lblCategory = QLabel('Category')
+
+        self.comboBox = QComboBox()
+        for fake_category in fake_categories[1:]:
+            self.comboBox.addItem(fake_category)       
+
         self.categoryEdit = QLineEdit()
         grid.addWidget(lblCategory, 4, 0)
-        grid.addWidget(self.categoryEdit, 4, 1)
+        grid.addWidget(self.comboBox, 4, 1)
+
         saveButton = QPushButton("Save")
         saveButton.clicked.connect(self.on_save)
         grid.addWidget(saveButton, 5, 0)
@@ -51,7 +57,12 @@ class DetailProductScreen:
         else:
             self.yearEdit.setText(str(self.detail_product['year']))
         self.companyEdit.setText(self.detail_product['company'])
-        self.categoryEdit.setText(self.detail_product['category'])
+        try:
+            currentComboIndex = fake_categories[1:].index(self.detail_product['category'])
+            self.comboBox.setCurrentIndex(currentComboIndex)
+        except ValueError:
+            self.comboBox.setCurrentIndex(0)
+        
     def on_save(self):
         # alert = QMessageBox()
         # alert.setText('You clicked Add')
@@ -59,7 +70,7 @@ class DetailProductScreen:
         self.detail_product['name'] = self.nameEdit.text()
         self.detail_product['year'] = self.yearEdit.text()
         self.detail_product['company'] = self.companyEdit.text()
-        self.detail_product['category'] = self.categoryEdit.text()
+        self.detail_product['category'] = self.comboBox.currentText()
         if(self.screen_type == 'insert'):
             self.product_screen.insert_product(self.detail_product)
         elif(self.screen_type == 'update'):
