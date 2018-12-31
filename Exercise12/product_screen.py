@@ -1,9 +1,11 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from fake_data import *
+# from fake_data import *
 from functools import partial
 from detail_product_screen import DetailProductScreen
+from database import Database
+products = []
 class ProductScreen:
     def __init__(self,):
         super().__init__()
@@ -31,7 +33,7 @@ class ProductScreen:
         self.tableWidget = QTableWidget()
         self.tableWidget.setHorizontalHeaderLabels(["Tên", "Năm SX", "Công ty", "Thể loại"])
         self.tableWidget.horizontalHeader().setFixedHeight(40)
-        self.fetch_data_to_table(fake_products)
+        self.fetch_data_to_table(products)
         for i in range(0,6):
             self.tableWidget.setColumnWidth(i, self.tableWidget.width() / 6)
         self.tableWidget.move(0,0)
@@ -42,33 +44,34 @@ class ProductScreen:
         self.tableWidget.setRowCount(len(table_data))
         self.tableWidget.setColumnCount(4 + 2)
         for rowId in range(0, len(table_data)):
-            fake_product = table_data[rowId]
+            product = table_data[rowId]
             self.tableWidget.setRowCount(len(table_data))
             self.tableWidget.setColumnCount(4 + 2)
-            self.tableWidget.setItem(rowId,0, QTableWidgetItem(fake_product["name"]))
-            self.tableWidget.setItem(rowId,1, QTableWidgetItem(str(fake_product["year"])))
-            self.tableWidget.setItem(rowId,2, QTableWidgetItem(fake_product["company"]))
-            self.tableWidget.setItem(rowId,3, QTableWidgetItem(fake_product["category"]))            
+            self.tableWidget.setItem(rowId,0, QTableWidgetItem(product["name"]))
+            self.tableWidget.setItem(rowId,1, QTableWidgetItem(str(product["year"])))
+            self.tableWidget.setItem(rowId,2, QTableWidgetItem(product["company"]))
+            self.tableWidget.setItem(rowId,3, QTableWidgetItem(product["category"]))            
             
             btn_edit_product = QPushButton('Edit')
             btn_edit_product.setStyleSheet("background-color: aquamarine ")
-            btn_edit_product.clicked.connect(partial(self.on_edit_product, rowId))
+            btn_edit_product.clicked.connect(partial(self.on_edit_product, product["id"]))
             self.tableWidget.setCellWidget(rowId,4, btn_edit_product)
             
             btn_delete_product = QPushButton('Delete')
             btn_delete_product.setStyleSheet("background-color: red")
-            btn_delete_product.clicked.connect(partial(self.on_delete_product, rowId))
+            btn_delete_product.clicked.connect(partial(self.on_delete_product, product["id"]))
 
             self.tableWidget.setCellWidget(rowId,5, btn_delete_product)
     def reloadData(self):
+        products = Database.getInstance().get_all_products()
         self.current_category = self.comboBox.currentText()
         if (self.current_category == 'All'):
-            self.fetch_data_to_table(fake_products)
+            self.fetch_data_to_table(products)
         else:
             filtered_products = []
-            for fake_product in fake_products:
-                if(fake_product["category"] == self.current_category):
-                    filtered_products.append(fake_product)
+            for product in products:
+                if(product["category"] == self.current_category):
+                    filtered_products.append(product)
             self.fetch_data_to_table(filtered_products)
     def comboBoxChange(self):
         self.reloadData()
@@ -81,20 +84,18 @@ class ProductScreen:
         buttonReply = QMessageBox.question(self.window, 'Confirmation', "Do you want to delete this ?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
         if buttonReply == QMessageBox.Yes:
             self.delete_product(rowId)
-            self.fetch_data_to_table(fake_products)
+            self.fetch_data_to_table(products)
     #insert, update, delete a product
     def insert_product(self, new_product):
-        fake_products.append(new_product)
+        Database.getInstance().insert_new_product(new_product)        
         self.reloadData()
     def update_product(self, updated_product):
-        product = fake_products[self.selectedId]
-        if(product is not None):
-           product = updated_product
-           self.reloadData()
-    def delete_product(self, rowId):
-        del fake_products[rowId]
+        Database.getInstance().update_product(productId, updated_product)                
+        self.reloadData()
+    def delete_product(self, productId):
+        Database.getInstance().update_product(productId, updated_product)                
         self.reloadData()
     def get_selected_product(self):
-        return fake_products[self.selectedId]
+        return products[self.selectedId]
     def to_string(self):
         pass

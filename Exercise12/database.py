@@ -1,4 +1,28 @@
 # pip3 install mysql-connector-python
+"""
+DROP TABLE pythontutorial.users;
+CREATE TABLE IF NOT EXISTS pythontutorial.users (
+            id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(30) NOT NULL,
+            email VARCHAR(50),
+            password VARCHAR(50),
+            created_date TIMESTAMP);
+INSERT INTO pythontutorial.users(name,email,password) VALUES('Hoang', 'hoang123@gmail.com', '123456');
+SELECT * FROM pythontutorial.users;
+
+DROP TABLE pythontutorial.products;
+CREATE TABLE IF NOT EXISTS pythontutorial.products (
+            id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(30) NOT NULL,
+            year INT(5)  NOT NULL,
+            company VARCHAR(50),
+            category VARCHAR(50) NOT NULL,
+            userId INT(6),            
+            created_date TIMESTAMP);
+INSERT INTO pythontutorial.products(name,year,company,category) VALUES('iphone X Red', 2017, 'Apple', 'Technology', 1);
+SELECT * FROM pythontutorial.products;
+"""
+
 import mysql.connector
 
 class Database:
@@ -35,20 +59,24 @@ class Database:
             products.append({"name": name, "year": year, "company": company, "category": category})
         return products
 
-    def insert_new_product(self,name,year,company,category):
+    def insert_new_product(self,new_product):    	    	
         try:
             self.cursor.execute("INSERT INTO Products"
                                 "(name, year, company, category) "
-                                "VALUES(%s, %d, %s, %s)", (name,year,company,category))
+                                "VALUES(%s, %d, %s, %s)", (new_product['name'],new_product['year'],new_product['company'],new_product['category']))
             product_id = self.cursor.lastrowid
             self.connection.commit()            
             return product_id
         except Exception as error:            
             return -1        
     
-    def update_product(self,product_id, name,year,company,category):
-        try:
-            update_values = []
+    def update_product(self,product_id, new_product):
+    	name = new_product['name']
+    	year = new_product['year']
+    	company = new_product['company']
+    	category = new_product['category']
+    	update_values = []
+        try:            
             if(name):
                 update_values.append("name='{}'".format(name))
             if(year):
@@ -57,8 +85,9 @@ class Database:
                 update_values.append("company='{}'".format(company))
             if(category):
                 update_values.append("category='{}'".format(category))                    
-            self.cursor.execute("UPDATE Products SET "+','.join(update_values)+
-                                " VALUES(%s, %s, %s, %s)", (name,year,company,category))            
+            sql = "UPDATE Products SET "+','.join(update_values)+
+                                " WHERE id={}".format(product_id)
+            self.cursor.execute(sql)
             self.connection.commit()
             return True
         except Exception as error:            

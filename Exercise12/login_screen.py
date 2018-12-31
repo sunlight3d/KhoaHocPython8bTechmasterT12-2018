@@ -1,14 +1,3 @@
-"""
-DROP TABLE pythontutorial.users;
-CREATE TABLE IF NOT EXISTS pythontutorial.users (
-            id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-            name VARCHAR(30) NOT NULL,
-            email VARCHAR(50),
-            password VARCHAR(50),
-            created_date TIMESTAMP);
-INSERT INTO pythontutorial.users(name,email,password) VALUES('Hoang', 'hoang123@gmail.com', '123456');
-SELECT * FROM pythontutorial.users;
-"""
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
