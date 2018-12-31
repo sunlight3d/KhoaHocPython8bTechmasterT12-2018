@@ -64,9 +64,6 @@ class DetailProductScreen:
             self.comboBox.setCurrentIndex(0)
         
     def on_save(self):
-        # alert = QMessageBox()
-        # alert.setText('You clicked Add')
-        # alert.exec_()
         self.detail_product['name'] = self.nameEdit.text()
         self.detail_product['year'] = self.yearEdit.text()
         self.detail_product['company'] = self.companyEdit.text()

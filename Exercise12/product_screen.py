@@ -6,6 +6,7 @@ from functools import partial
 from detail_product_screen import DetailProductScreen
 from database import Database
 products = []
+categories = ["All","Technology", "Foods", "Drinking", "Fashion"]
 class ProductScreen:
     def __init__(self,):
         super().__init__()
@@ -16,8 +17,8 @@ class ProductScreen:
         self.window.setWindowTitle('List of products')
         vbox = QVBoxLayout()
         self.comboBox = QComboBox()
-        for fake_category in fake_categories:
-            self.comboBox.addItem(fake_category)
+        for category in categories:
+            self.comboBox.addItem(category)        
         self.comboBox.currentIndexChanged.connect(self.comboBoxChange)
         self.hbox = QHBoxLayout()
         self.label_select_category = QLabel()
@@ -33,7 +34,7 @@ class ProductScreen:
         self.tableWidget = QTableWidget()
         self.tableWidget.setHorizontalHeaderLabels(["Tên", "Năm SX", "Công ty", "Thể loại"])
         self.tableWidget.horizontalHeader().setFixedHeight(40)
-        self.fetch_data_to_table(products)
+        self.reloadData()
         for i in range(0,6):
             self.tableWidget.setColumnWidth(i, self.tableWidget.width() / 6)
         self.tableWidget.move(0,0)
@@ -77,8 +78,8 @@ class ProductScreen:
         self.reloadData()
     def on_add_product(self):
         self.detail_product_screen = DetailProductScreen('insert',self)
-    def on_edit_product(self, rowId):        
-        self.selectedId = rowId
+    def on_edit_product(self, productId):        
+        self.selectedId = productId
         self.detail_product_screen = DetailProductScreen('update',self)
     def on_delete_product(self, rowId):
         buttonReply = QMessageBox.question(self.window, 'Confirmation', "Do you want to delete this ?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
@@ -96,6 +97,6 @@ class ProductScreen:
         Database.getInstance().update_product(productId, updated_product)                
         self.reloadData()
     def get_selected_product(self):
-        return products[self.selectedId]
+        return Database.getInstance().get_product_from_id(self.selectedId)
     def to_string(self):
         pass

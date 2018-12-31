@@ -4,6 +4,7 @@ from PyQt5.QtCore import *
 from product_screen import ProductScreen
 from fake_data import *
 from database import Database
+import pickle
 class LoginScreen:
     def __init__(self,):
         super().__init__()
@@ -42,19 +43,29 @@ class LoginScreen:
         self.window.show()
         self.database = Database.getInstance()
     def on_login_clicked(self):
-        # alert = QMessageBox()
-        # alert.setText('You clicked Login!')
-        # alert.exec_()
-        if(self.login_user()):
+        email = self.txtEmail.text().strip()
+        password = self.txtPassword.text().strip()                
+        logged_user = self.database.login(email, password)
+        
+        if(logged_user):
             self.window.close()
             self.product_screen = ProductScreen()
         else:
             alert = QMessageBox()
             alert.setText('Wrong email and password')
-            alert.exec_()
-    def login_user(self):
-        email = self.txtEmail.text().strip()
-        password = self.txtPassword.text().strip()        
-        return self.database.check_login(email, password)        
+            alert.exec_()    
+    def save_user_to_disk(self, dict_user):
+        self.login_file = "login.data"
+        file_writer = open(self.login_file, 'wb')
+        pickle.dump([dict_user.id,dict_user.email, dict_user.password], file_writer)    
     def to_string(self):
         pass
+
+
+
+
+
+
+
+
+
