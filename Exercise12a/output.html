@@ -1,0 +1,835 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">
+<html lang="vi" dir="ltr" version="HTML+RDFa 1.1"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Thông tin tỷ giá chốt" />
+<link rel="shortcut icon" href="https://www.vpbank.com.vn/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="shortlink" href="https://www.vpbank.com.vn/vpb-exchange-rates" />
+<meta name="generator" content="vpb.com.vn" />
+<meta name="keywords" content="mua xe trả góp,vay tín chấp,thẻ tín dụng,thấu chi,vay kinh doanh,thẻ debit,vay vốn kinh doanh,thẻ trả trước,vay du học,vay tiêu dùng,giao dịch qua fax,dịch vụ séc,vay ngắn hạn,chi hộ,chuyển tiền,kiểm đếm tiền mặt,tiền gửi,vay vốn dự án,thu hộ,tien gui ky han,trả lương,cash pooling,nhờ thu,ngoại hối spot,internet banking,dịch vụ LC,ngoại hối swap,tài trợ,cho vay,tiền gửi,trái phiếu doanh nghiệp,chiết khấu,giấy tờ có giá" />
+<meta name="robots" content="follow, index" />
+<link rel="canonical" href="https://www.vpbank.com.vn/vpb-exchange-rates" />
+  <title>Tỷ giá | VPBank</title>  
+  
+  <link type="text/css" rel="stylesheet" href="https://www.vpbank.com.vn/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.vpbank.com.vn/sites/default/files/css/css_fDrG_yHTtgFgVsv8ZsfnZFbPFLJmUIzbylzJHifFik8.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.vpbank.com.vn/sites/all/modules/date/date_popup/themes/jquery.timeentry.css?pkfvsc" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.vpbank.com.vn/sites/default/files/css/css_2O-s2tG8QB9gTwVxUxOxpvPgX8En4C7QZlGpZdTm_ZY.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.vpbank.com.vn/sites/default/files/css/css_e1tNPDYiKrX6iWjD_I4VjITQFYFAZBuzFFCVnsEsuNU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.vpbank.com.vn/sites/all/modules/popup/popup.css?pkfvsc" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.vpbank.com.vn/sites/default/files/css/css_0Akdd0E8APgpjgGMNL5vGZP1B0b8adZQX9B4m9u1940.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.vpbank.com.vn/sites/default/files/css/css_g5pRy0OeWCfXTGSQ9b2ZfgNNUiYa3L79u92VKZFEnCs.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.vpbank.com.vn/sites/default/files/css/css_fr7k_AghmBYx1gq4U0IRiki0lsnpwNXch5QKbAwqU6Q.css" media="all" />
+  <script type="text/javascript" src="https://www.vpbank.com.vn/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/misc/drupal.js?pkfvsc"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/misc/ui/jquery.ui.core.min.js?v=1.8.7"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/misc/ui/jquery.ui.datepicker.min.js?v=1.8.7"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/modules/locale/locale.datepicker.js?v=1.8.7"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/sites/all/modules/date/date_popup/jquery.timeentry.pack.js?v=1.4.7"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/sites/all/modules/admin_menu/admin_devel/admin_devel.js?pkfvsc"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/sites/default/files/languages/vi_-84U3Ja6BBMGO9YFYJA2zspk9yhgad0AgkO0S1nQolw.js?pkfvsc"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/sites/all/themes/syntek/js/nice_menus.js?pkfvsc"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/sites/all/themes/syntek/js/jquery.ui.touch-punch.min.js?pkfvsc"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/sites/all/modules/panels/js/panels.js?pkfvsc"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/sites/all/modules/popup/popup.js?pkfvsc"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/sites/all/modules/views_slideshow/js/views_slideshow.js?pkfvsc"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/sites/all/modules/date/date_popup/date_popup.js?pkfvsc"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/sites/all/themes/omega/omega/js/jquery.formalize.js?pkfvsc"></script>
+<script type="text/javascript" src="https://www.vpbank.com.vn/sites/all/themes/omega/omega/js/omega-mediaqueries.js?pkfvsc"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"syntek","theme_token":"DcLxyrE8jninfbPTSDybfnzmTmMrMNax2snclu8e8wk","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/ui\/jquery.ui.core.min.js":1,"misc\/ui\/jquery.ui.datepicker.min.js":1,"modules\/locale\/locale.datepicker.js":1,"sites\/all\/modules\/date\/date_popup\/jquery.timeentry.pack.js":1,"sites\/all\/modules\/admin_menu\/admin_devel\/admin_devel.js":1,"public:\/\/languages\/vi_-84U3Ja6BBMGO9YFYJA2zspk9yhgad0AgkO0S1nQolw.js":1,"sites\/all\/themes\/syntek\/js\/nice_menus.js":1,"sites\/all\/themes\/syntek\/js\/jquery.ui.touch-punch.min.js":1,"sites\/all\/modules\/panels\/js\/panels.js":1,"sites\/all\/modules\/popup\/popup.js":1,"sites\/all\/modules\/views_slideshow\/js\/views_slideshow.js":1,"sites\/all\/modules\/date\/date_popup\/date_popup.js":1,"sites\/all\/themes\/omega\/omega\/js\/jquery.formalize.js":1,"sites\/all\/themes\/omega\/omega\/js\/omega-mediaqueries.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.datepicker.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/jquery.timeentry.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/youtube\/css\/youtube.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/themes\/syntek\/css\/desktop.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/nice_menus\/nice_menus.css":1,"sites\/all\/modules\/nice_menus\/nice_menus_default.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/popup\/popup.css":1,"sites\/all\/modules\/views_slideshow\/views_slideshow.css":1,"modules\/locale\/locale.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-reset.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-mobile.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-alpha.css":1,"sites\/all\/themes\/omega\/omega\/css\/formalize.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-text.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-branding.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-menu.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-forms.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-visuals.css":1,"sites\/all\/themes\/syntek\/css\/global.css":1,"normal::sites\/all\/themes\/syntek\/css\/syntek-alpha-default.css":1,"normal::sites\/all\/themes\/syntek\/css\/syntek-alpha-default-normal.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-24.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1}},"popup":{"effects":{"show":{"default":"this.body.show();","fade":"\n        if (this.opacity){\n          this.body.fadeTo(\u0027medium\u0027,this.opacity);\n        }else{\n          this.body.fadeIn(\u0027medium\u0027);\n        }","slide-down":"this.body.slideDown(\u0027medium\u0027)","slide-down-fade":"\n        this.body.animate(\n          {\n            height:\u0027show\u0027,\n            opacity:(this.opacity ? this.opacity : \u0027show\u0027)\n          }, \u0027medium\u0027\n        );"},"hide":{"default":"this.body.hide();","fade":"this.body.fadeOut(\u0027medium\u0027);","slide-down":"this.body.slideUp(\u0027medium\u0027);","slide-down-fade":"\n        this.body.animate(\n          {\n            height:\u0027hide\u0027,\n            opacity:\u0027hide\u0027\n          }, \u0027medium\u0027\n        );"}},"linger":"250"},"jquery":{"ui":{"datepicker":{"isRTL":false,"firstDay":0}}},"datePopup":{"edit-field-gio-hieu-luc-value-value-datepicker-popup-0":{"func":"datepicker","settings":{"changeMonth":true,"changeYear":true,"autoPopUp":"focus","closeAtTop":false,"speed":"immediate","firstDay":0,"dateFormat":"yy-mm-dd","yearRange":"+0:+0","fromTo":false,"defaultDate":"0y"}}},"urlIsAjaxTrusted":{"\/vpb-exchange-rates":true},"omega":{"layouts":{"primary":"normal","order":["narrow","normal"],"queries":{"narrow":"all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)","normal":"all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)"}}}});
+//--><!]]>
+</script>
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>   	  
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TTSKTSC');</script>
+<!-- End Google Tag Manager -->
+
+</head>
+<body  class="html not-front not-logged-in page-vpb-exchange-rates i18n-vi context-vpb-exchange-rates">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTSKTSC" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Nhảy đến nội dung</a>
+  </div>
+    <div class="page clearfix" id="page">
+      <header id="section-header" class="section section-header">
+  <div id="zone-user-wrapper" class="zone-wrapper zone-user-wrapper clearfix">  
+  <div id="zone-user" class="zone zone-user clearfix container-24">
+    <div class="grid-19 region region-user-second" id="region-user-second">
+  <div class="region-inner region-user-second-inner">
+    <div class="block block-menu-block block-3 block-menu-block-3 odd block-without-title" id="block-menu-block-3">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="menu-block-wrapper menu-block-3 menu-name-menu-top-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-1391"><a href="/bai-viet/gioi-thieu-vpbank" title="">Về chúng tôi</a></li>
+<li class="leaf menu-mlid-2597"><a href="/danh-cho-nha-dau-tu">Dành cho nhà đầu tư</a></li>
+<li class="leaf menu-mlid-2602"><a href="/bai-viet/tin-tuc">Tin tức</a></li>
+<li class="leaf menu-mlid-943"><a href="https://tuyendung.vpbank.com.vn" target="_blank">Tuyển dụng</a></li>
+<li class="last leaf menu-mlid-964"><a href="/content/lien-he">Liên hệ</a></li>
+</ul></div>
+    </div>
+  </div>
+</div><div class="block block-search block-form block-search-form even block-without-title" id="block-search-form">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <form action="/vpb-exchange-rates" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Biểu mẫu tìm kiếm</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Tìm kiếm </label>
+ <input title="Nhập điều kiện tìm kiếm." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Tìm kiếm" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-_yjKWLbMjPUrJSzr_iWZTnE23Jr4oYkCd1yiEqMOx88" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div><div id="zone-branding-wrapper" class="zone-wrapper zone-branding-wrapper clearfix">  
+  <div id="zone-branding" class="zone zone-branding clearfix container-12">
+    <div class="grid-12 region region-branding" id="region-branding">
+  <div class="region-inner region-branding-inner">
+        <div class="branding-data clearfix">
+            <div class="logo-img">
+        <a href="/" rel="home" title=""><img src="https://www.vpbank.com.vn/sites/all/themes/syntek/logo.png" alt="" id="logo" /></a>      </div>
+                </div>
+        <div class="block block-block block-15 block-block-15 odd block-without-title" id="block-block-15">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <p style="display: block;  float: left; margin:0; padding: 0;"><a href="https://www.vpbank.com.vn/?language=vn"><img alt="" src="https://www.vpbank.com.vn/sites/default/files/logo.jpg" style="width: 164px; height: 40px;" /></a></p>
+    </div>
+  </div>
+</div><div class="block block-block block-20 block-block-20 even block-without-title" id="block-block-20">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div id="vpb_utilities">
+<div class="block-title">VPBank Online</div>
+<div id="vpb_i2b_home_vn">
+<p><a class="i2b_sme" href="https://online.vpbank.com.vn/ebank" target="_blank">Cá nhân</a></p>
+<p><a class="i2b_sme_mb" href="https://online.vpbank.com.vn/mobile" target="_blank">Cá nhân</a></p>
+<p><a class="i2b_corp" href="https://online.vpbank.com.vn/wholesale/login" target="_blank">Doanh nghiệp</a></p>
+</div>
+</div>
+    </div>
+  </div>
+</div><div class="block block-nice-menus block-1 block-nice-menus-1 odd block-without-title" id="block-nice-menus-1">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul class="nice-menu nice-menu-down" id="nice-menu-1"><li class="menu-1323 menuparent  menu-path-taxonomy-term-244  first   odd  "><a href="/kh-ca-nhan" title="">Khách hàng Cá nhân</a><ul><li class="menu-1326 menu-path-view  first   odd   last "><div class="view view-vpb-menu-kh-canhan view-id-vpb_menu_kh_canhan view-display-id-default view-dom-id-06135916874e73d3c7816339b403f421">
+        
+  
+  
+      <div class="view-content">
+      <table class="views-view-grid cols-1" class="views-view-grid">
+  <tbody>
+          <tr class="row-first">
+                  <td class="col-first">
+              
+          <a href="/kh-ca-nhan/dich-vu-ca-nhan">Dịch vụ cá nhân</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/kh-ca-nhan/the">Thẻ</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/kh-ca-nhan/vay">Vay</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/kh-ca-nhan/tai-khoan">Tài khoản</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/kh-ca-nhan/gui-tiet-kiem">Gửi tiết kiệm</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/kh-ca-nhan/dich-vu-e-banking">Dịch vụ E-Banking</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/kh-ca-nhan/bao-hiem">Bảo hiểm</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/kh-ca-nhan/vpbank-loyalty">VPBank Loyalty</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/kh-ca-nhan/khach-hang-uu-tien">Khách hàng ưu tiên</a>            </td>
+              </tr>
+          <tr class="row-last">
+                  <td class="col-first">
+              
+          <a href="/uu-dai-danh-cho-chu-the">Ưu đãi dành cho chủ thẻ</a>            </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></li>
+</ul></li>
+<li class="menu-2586 menu-path-taxonomy-term-561   even  "><a href="/bai-viet/ho-kinh-doanh">Hộ kinh doanh</a></li>
+<li class="menu-1324 menuparent  menu-path-taxonomy-term-231   odd  "><a href="/doanh-nghiep-vua-va-nho">Doanh nghiệp vừa và nhỏ</a><ul><li class="menu-2724 menu-path-https--smeconnectvpbankcomvn  first   odd  "><a href="https://smeconnect.vpbank.com.vn" target="_blank">Cầu nối kinh doanh</a></li>
+<li class="menu-2723 menu-path-taxonomy-term-583   even  "><a href="/sme-toolkit/toolkit">SME Toolkit</a></li>
+<li class="menu-2722 menuparent  menu-path-node-15695   odd  "><a href="/dn-vua-va-nho/san-pham">Sản phẩm</a><ul><li class="menu-1388 menu-path-view  first   odd   last "><div class="view view-vpb-menu-doanh-nghiep-vua-va-nho view-id-vpb_menu_doanh_nghiep_vua_va_nho view-display-id-default view-dom-id-dc02dfe6846bbb1196b8ba9d6a0a49ee">
+        
+  
+  
+      <div class="view-content">
+      <table class="views-view-grid cols-1" class="views-view-grid">
+  <tbody>
+          <tr class="row-first">
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-vua-va-nho/giai-phap-cho-doanh-nghiep-do-nu-lam-chu">Giải pháp cho doanh nghiệp do nữ làm chủ</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-vua-va-nho/san-pham-vay-chuyen-biet-cho-phan-khuc-micro-sme">Sản phẩm vay chuyên biệt cho phân khúc Micro SME</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-vua-va-nho/san-pham-tien-gui">Sản phẩm Tiền gửi</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-vua-va-nho/san-pham-tien-vay">Sản phẩm Tiền vay</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-vua-va-nho/thanh-toan-quoc-te">Thanh toán quốc tế</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-vua-va-nho/tai-tro-thuong-mai">Tài trợ thương mại</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-vua-va-nho/quan-ly-dong-tien">Quản lý dòng tiền</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-vua-va-nho/dich-vu-vpbank-online">Dịch vụ VPBank Online</a>            </td>
+              </tr>
+          <tr class="row-last">
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-vua-va-nho/san-pham-dich-vu-giao-dich-phai-sinh">Sản phẩm dịch vụ giao dịch Phái sinh</a>            </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></li>
+</ul></li>
+<li class="menu-2725 menu-path-taxonomy-term-587   even   last "><a href="/uu-dai/phan-khuc-vpbank-sme">Ưu đãi doanh nghiệp</a></li>
+</ul></li>
+<li class="menu-1325 menuparent  menu-path-taxonomy-term-245   even  "><a href="/doanh-nghiep-lon">Doanh nghiệp lớn</a><ul><li class="menu-1389 menu-path-view  first   odd   last "><div class="view view-vpb-menu-doanh-nghiep-lon view-id-vpb_menu_doanh_nghiep_lon view-display-id-default view-dom-id-e75536980e27b9880997209c7d582d96">
+        
+  
+  
+      <div class="view-content">
+      <table class="views-view-grid cols-1" class="views-view-grid">
+  <tbody>
+          <tr class="row-first">
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-lon/bao-lanh">Bảo lãnh</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-lon/san-pham-tin-dung">Sản phẩm tín dụng</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-lon/dich-vu-va-tai-tro-xnk">Dịch vụ và Tài trợ XNK</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-lon/dich-vu-tai-khoan">Dịch vụ tài khoản</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-lon/chuong-trinh">Chương trình</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-lon/san-pham-tai-chinh">Sản phẩm tài chính</a>            </td>
+              </tr>
+          <tr >
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-lon/ngan-hang-truc-tuyen">Ngân hàng trực tuyến</a>            </td>
+              </tr>
+          <tr class="row-last">
+                  <td class="col-first">
+              
+          <a href="/doanh-nghiep-lon/dich-vu-giao-dich-qua-email">Dịch vụ giao dịch qua email</a>            </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></li>
+</ul></li>
+<li class="menu-2671 menuparent  menu-path-front   odd   last "><a href="/" class="mobile-additional-menu">.</a><ul><li class="menu-2672 menu-path-taxonomy-term-278  first   odd  "><a href="/bai-viet/gioi-thieu-vpbank" class="mobile-additional-menu">Về chúng tôi</a></li>
+<li class="menu-2673 menu-path-taxonomy-term-297   even  "><a href="/bai-viet/danh-cho-nha-dau-tu" class="mobile-additional-menu">Dành cho nhà đầu tư</a></li>
+<li class="menu-2674 menu-path-taxonomy-term-298   odd  "><a href="/bai-viet/tin-tuc" class="mobile-additional-menu">Tin tức</a></li>
+<li class="menu-2675 menu-path-https--tuyendungvpbankcomvn   even  "><a href="https://tuyendung.vpbank.com.vn" class="mobile-additional-menu" target="_blank">Tuyển dụng</a></li>
+<li class="menu-2676 menu-path-node-1804   odd  "><a href="/content/chia-se-gop-y" class="mobile-additional-menu">Chia sẻ - Góp ý</a></li>
+<li class="menu-2677 menu-path-node-1782   even   last "><a href="/content/lien-he" class="mobile-additional-menu">Liên hệ</a></li>
+</ul></li>
+</ul>
+    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div><div id="zone-menu-wrapper" class="zone-wrapper zone-menu-wrapper clearfix">  
+  <div id="zone-menu" class="zone zone-menu clearfix container-12">
+    <div class="grid-12 region region-menu" id="region-menu">
+  <div class="region-inner region-menu-inner">
+          </div>
+</div>
+  </div>
+</div><div id="zone-header-wrapper" class="zone-wrapper zone-header-wrapper clearfix">  
+  <div id="zone-header" class="zone zone-header clearfix container-24">
+    <div class="grid-19 region region-header-first" id="region-header-first">
+  <div class="region-inner region-header-first-inner">
+    <div class="block block-block block-37 block-block-37 odd block-without-title" id="block-block-37">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <p><img alt="" src="/sites/default/files/20170603/TOP%20VN.JPG" style="width: 1920px; height: 780px;" /></p>
+    </div>
+  </div>
+</div><div class="block block-block block-23 block-block-23 even block-without-title" id="block-block-23">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <p><nav class="social"><ul><li class="promotions"><a href="/bai-viet/tin-tuc/khuyen-mai">Khuyến mại<span class="promotions-star"> </span></a></li>
+<li class="diem-giao-dich"><a href="/locations">Chi nhánh &amp; ATM</a></li>
+<li class="ty-gia"><a href="/vpb-exchange-rates">Tỷ giá</a></li>
+<li class="lai-suat-bieu-phi"><a href="/tai-lieu-bieu-mau/lai-suat-va-bieu-phi/lai-suat-huy-dong">Lãi suất &amp; biểu phí </a></li>
+<li class="chung-thuc-bao-lanh"><a href="/lookup/lookup.php" targer="_blank">Xác thực bảo lãnh</a></li>
+<li class="khach-hang-uu-tien"><a href="https://diamond.vpbank.com.vn">VPBank Diamond</a></li>
+</ul><p></p></nav></p>
+    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div></header>    	  <section id="section-content" class="section section-content">
+  <div id="zone-content-wrapper" class="zone-wrapper zone-content-wrapper clearfix">  
+  <div id="zone-content" class="zone zone-content clearfix container-24">    
+          <div id="breadcrumb" class="grid-24"><h2 class="element-invisible">Bạn đang ở đây</h2><div class="breadcrumb"><a href="/">Trang chủ</a></div></div>
+        
+        <div class="grid-24 region region-content" id="region-content">
+  <div class="region-inner region-content-inner">
+    <a id="main-content"></a>
+                <h1 class="title" id="page-title">Tỷ giá</h1>
+                        <div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="view view-vpb-exchange-rates view-id-vpb_exchange_rates view-display-id-page view-dom-id-977bcc970fa4271456fada56cef8ba11">
+        
+      <div class="view-filters">
+      <form action="/vpb-exchange-rates" method="get" id="views-exposed-form-vpb-exchange-rates-page" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-field-gio-hieu-luc-value-wrapper" class="views-exposed-widget views-widget-filter-field_gio_hieu_luc_value">
+                  <label for="edit-field-gio-hieu-luc-value">
+            Ngày đăng          </label>
+                        <div class="views-widget">
+          <div id="edit-field-gio-hieu-luc-value-value-wrapper"><div id="edit-field-gio-hieu-luc-value-value"><div  class="container-inline-date"><div class="form-item form-type-date-popup form-item-field-gio-hieu-luc-value-value">
+  <div id="edit-field-gio-hieu-luc-value-value"  class="date-padding"><div class="form-item form-type-textfield form-item-field-gio-hieu-luc-value-value-date">
+  <input type="text" id="edit-field-gio-hieu-luc-value-value-datepicker-popup-0" name="field_gio_hieu_luc_value[value][date]" value="" size="20" maxlength="30" class="form-text" />
+<div class="description"> E.g., 2019-01-05</div>
+</div>
+</div>
+</div>
+</div></div></div>        </div>
+              </div>
+          <div id="edit-so-wrapper" class="views-exposed-widget views-widget-filter-field_so_ban_tin_value">
+                  <label for="edit-so">
+            Số bản tin          </label>
+                        <div class="views-widget">
+          <div class="form-item form-type-select form-item-so">
+ <select id="edit-so" name="so" class="form-select"><option value="All" selected="selected">Toàn bộ</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option></select>
+</div>
+        </div>
+              </div>
+                    <div class="views-exposed-widget views-submit-button">
+      <input type="submit" id="edit-submit-vpb-exchange-rates" name="" value="Áp dụng" class="form-submit" />    </div>
+      </div>
+</div>
+</div></form>    </div>
+  
+  
+      <div class="view-content">
+      <div class="view-grouping"><div class="view-grouping-header">Ngày đăng: <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2019-01-04T09:03:00+07:00">04/01/2019 - 09:03</span></div><div class="view-grouping-content"><table class="views-table cols-10">
+      <caption>Số bản tin: 2</caption>
+  
+      <thead>
+      <tr>
+        <th>
+        </th>
+                  <th>
+            Mua TM<div>Mua CK<div>Bán          </th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr class="odd">
+        <th>
+          USD        </th>
+                  <td>
+            23,130<div>23,150<div>23,250          </td>
+              </tr>
+          <tr class="even">
+        <th>
+          EUR        </th>
+                  <td>
+            26,051<div>26,231<div>26,750          </td>
+              </tr>
+          <tr class="odd">
+        <th>
+          GBP        </th>
+                  <td>
+            28,816<div>29,039<div>29,619          </td>
+              </tr>
+          <tr class="even">
+        <th>
+          CHF        </th>
+                  <td>
+            23,143<div>23,340<div>23,720          </td>
+              </tr>
+          <tr class="odd">
+        <th>
+          JPY        </th>
+                  <td>
+            211.89<div>213.43<div>217.14          </td>
+              </tr>
+          <tr class="even">
+        <th>
+          AUD        </th>
+                  <td>
+            15,954<div>16,064<div>16,449          </td>
+              </tr>
+          <tr class="odd">
+        <th>
+          CAD        </th>
+                  <td>
+            16,863<div>17,021<div>17,395          </td>
+              </tr>
+          <tr class="even">
+        <th>
+          SGD        </th>
+                  <td>
+            16,829<div>16,863<div>17,202          </td>
+              </tr>
+          <tr class="odd">
+        <th>
+          THB        </th>
+                  <td>
+                      </td>
+              </tr>
+      </tbody>
+</table>
+
+</div></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</div>	
+	  </div>
+</div>  </div>
+</div></section> 
+    	
+      <footer id="section-footer" class="section section-footer">
+  <div id="zone-footer-wrapper" class="zone-wrapper zone-footer-wrapper clearfix">  
+  <div id="zone-footer" class="zone zone-footer clearfix container-12">
+    <div class="grid-12 region region-footer-first" id="region-footer-first">
+  <div class="region-inner region-footer-first-inner">
+    <div class="block block-block block-5 block-block-5 odd block-without-title" id="block-block-5">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="address">
+<p class="nganhang">Ngân hàng Việt Nam Thịnh Vượng VPBank</p>
+<div class="contact-hotline"><span class="icon-phone"> </span>KH Cá nhân: <span style="color:#00873f; font-size:12px;"><strong>1900545415 (Phím 1)</strong></span> - <span class="icon-phone"> </span>KH Doanh nghiệp: <span style="color:#00873f; font-size:12px;"><strong>1900545415 (Phím 2)</strong></span></div>
+</div>
+<p> </p>
+    </div>
+  </div>
+</div>  </div>
+</div><div class="grid-12 region region-footer-second" id="region-footer-second">
+  <div class="region-inner region-footer-second-inner">
+    <div class="block block-locale block-language block-locale-language odd block-without-title" id="block-locale-language">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul class="language-switcher-locale-session"><li class="en first active"><a href="/vpb-exchange-rates?target=en" class="language-link active" xml:lang="en">English</a></li><li class="vi last active"><a href="/vpb-exchange-rates" class="language-link session-active active" xml:lang="vi">Tiếng Việt</a></li></ul>    </div>
+  </div>
+</div><div class="block block-block block-21 block-block-21 even block-without-title" id="block-block-21">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="left"><a href="/so-do-website">Sơ đồ website</a> | <a href="/chinh-sach-bao-mat">Chính sách bảo mật</a> | <a href="https://mail.vpb.com.vn/webmail" targer="_blank">Webmail</a></div>
+<div class="right">
+<p><span class="fanpage"><a href="https://www.facebook.com/VPBankOnline/" target="_blank"> </a></span> |</p>
+</div>
+<p> </p>
+    </div>
+  </div>
+</div><div class="block block-block block-28 block-block-28 odd block-without-title" id="block-block-28">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="vpb-call textwidget hide-call" style="display:none;">
+<div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show hidden-xs visible-sm visible-md visible-lg am-call" id="coccoc-alo-phoneIcon" style=" display: block;">
+<div class="coccoc-alo-ph-circle"> </div>
+<div class="coccoc-alo-ph-circle-fill"> </div>
+<div class="coccoc-alo-ph-img-circle"><a class="pps-btn-img " href="#" title="Liên hệ"><img alt="Liên hệ" onmouseout="this.src='/sites/default/files/hinhtron.png';" onmouseover="this.src='/sites/default/files/hinhtron.png';" src="/sites/default/files/hinhtron.png" width="50" /></a></div>
+</div>
+<div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show visible-xs hidden-sm hidden-md hidden-lg  am-call" id="coccoc-alo-phoneIcon" style="display: block;">
+<div class="coccoc-alo-ph-circle"> </div>
+<div class="coccoc-alo-ph-circle-fill"> </div>
+<div class="coccoc-alo-ph-img-circle"><a class="pps-btn-img " href="tel:1900545415" title="Liên hệ"><img alt="Liên hệ" onmouseout="this.src='/sites/default/files/hinhtron.png';" onmouseover="this.src='/sites/default/files/hinhtron.png';" src="/sites/default/files/hinhtron.png" width="50" /></a></div>
+</div>
+</div>
+    </div>
+  </div>
+</div><div class="block block-block block-38 block-block-38 even block-without-title" id="block-block-38">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="footer-fb" style="display:none;"><span class="fanpage"><a href="https://www.facebook.com/VPBankOnline/" target="_blank"> </a></span></div>
+    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div></footer>  </div>  
+<script>
+jQuery.noConflict();
+jQuery(function($) {
+	$('#edit-submitted-doi-tuong-khach-hang').change(function() {
+		$('#edit-submitted-san-pham-quan-tam option').remove();
+		if($('#edit-submitted-doi-tuong-khach-hang').val() == 'Khách hàng cá nhân'){
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("- Chọn -", ""));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Tiết kiệm", "Tiết kiệm"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Vay tín chấp", "Vay tín chấp"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Vay thế chấp", "Vay thế chấp"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Thẻ ghi nợ", "Thẻ ghi nợ"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Thẻ tín dụng", "Thẻ tín dụng"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Tài khoản", "Tài khoản"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Khác", "Khác"));
+		
+		}else if($('#edit-submitted-doi-tuong-khach-hang').val() == 'Khách hàng Doanh nghiệp vừa và nhỏ'){
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("- Chọn -", ""));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Huy động", "Huy động"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Ngoại hối", "Ngoại hối"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Tín dụng", "Tín dụng"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Tài trợ thương mại", "Tài trợ thương mại"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Quản lý dòng tiền", "Quản lý dòng tiền"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Khác", "Khác"));
+			
+		}else if($('#edit-submitted-doi-tuong-khach-hang').val() == 'Khách hàng Doanh nghiệp lớn'){
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("- Chọn -", ""));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Tín dụng", "Tín dụng"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Tiền gửi", "Tiền gửi"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Quản lý tiền tệ", "Quản lý tiền tệ"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Kinh doanh ngoại tệ", "Kinh doanh ngoại tệ"));
+		
+		}else{
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("- Chọn -", ""));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Tiết kiệm", "Tiết kiệm"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Vay tín chấp", "Vay tín chấp"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Vay thế chấp", "Vay thế chấp"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Thẻ ghi nợ", "Thẻ ghi nợ"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Thẻ tín dụng", "Thẻ tín dụng"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Tài khoản", "Tài khoản"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Huy động", "Huy động"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Ngoại hối", "Ngoại hối"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Tín dụng", "Tín dụng"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Tài trợ thương mại", "Tài trợ thương mại"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Quản lý dòng tiền", "Quản lý dòng tiền"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Tín dụng", "Tín dụng"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Tiền gửi", "Tiền gửi"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Quản lý tiền tệ", "Quản lý tiền tệ"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Kinh doanh ngoại tệ", "Kinh doanh ngoại tệ"));
+			$("#edit-submitted-san-pham-quan-tam").append(new Option("Khác", "Khác"));
+		}
+	});
+	
+	$('.investment-item .group-title').click(function() {
+		if($(this).hasClass("collapse")){
+			$(this).removeClass("collapse").addClass("expand");
+			$(this).parent().find(".group-content").removeClass("collapse").addClass("expand");
+		}else{
+			$(this).removeClass("expand").addClass("collapse");
+			$(this).parent().find(".group-content").removeClass("expand").addClass("collapse");
+		}
+		
+		
+	});
+
+});
+</script>
+
+
+<!-- 1. Add by Nguyen Manh Phu @ integrate CISCO Webchat -->
+<!--
+<script language=javascript>
+    var egainChat = {};
+    egainChat.egainChatParameters = {};
+    //Set to true to enable posting attributes to templates.
+    egainChat.postChatAttributes  = false;
+    egainChat.eglvchathandle = null;
+	   egainChat.liveServerURL = "https://10.37.16.225/system";
+    egainChat.openHelp = function() {
+        var domainRegex = /^((?:https?:\/\/)?(?:www\.)?([^\/]+))/i;
+        try{
+            if( egainChat.eglvchathandle != null && egainChat.eglvchathandle.closed == false ){
+                egainChat.eglvchathandle.focus();
+                return;
+            }
+        }
+        catch(err){}
+        var refererName = "";
+        refererName = encodeURIComponent(refererName);
+        var refererurl = encodeURIComponent(document.location.href);
+        var hashIndex = refererurl.lastIndexOf('#');
+        if(hashIndex != -1){
+            refererurl = refererurl.substring(0,hashIndex);
+        }
+        var eglvcaseid = (/eglvcaseid=[0-9]*/gi).exec(window.location.search);
+        var vhtIds = '';
+        if(typeof EGAINCLOUD != "undefined" && EGAINCLOUD.Account.getAllIds)
+        {
+            var ids = EGAINCLOUD.Account.getAllIds();
+            vhtIds = '&aId=' + ids.a + '&sId=' + ids.s +'&uId=' + ids.u;
+        }
+        var EG_CALL_Q = window.EG_CALL_Q || [];
+        EG_CALL_Q.push( ["enableTracker", true] );
+        var eGainChatUrl = egainChat.liveServerURL+'/templates/chat/kiwi/chatvn.html?subActivity=Chat&entryPointId=1001&templateName=kiwi&languageCode=en&countryCode=US&ver=v11&postChatAttributes='+egainChat.postChatAttributes+'&eglvrefname='+refererName+'&'+eglvcaseid+vhtIds;
+        var domain = domainRegex.exec(eGainChatUrl)[0];
+        if( window.navigator.userAgent.indexOf("Trident") != -1 && egainChat.postChatAttributes ) {
+            var win = document.getElementById('egainChatDomainFrame');
+            win.contentWindow.postMessage(JSON.stringify(egainChat.egainChatParameters), domain);
+        }
+        if( (eGainChatUrl + refererurl).length <= 2000)
+            eGainChatUrl += '&referer='+refererurl;
+        var params = "height=650,width=450,resizable=yes,scrollbars=yes,toolbar=no";
+		   if (egainChat.postChatAttributes)
+		       egainChat.storeChatParameters('eGainChatIdentifier','true');
+        egainChat.eglvchathandle = window.open( eGainChatUrl,'',params)
+        /*Message posted to the child window every second until it sends a message in return. This is done as we can not be sure when the mssage listener will be set in the child window.*/
+        if( window.navigator.userAgent.indexOf("Trident") == -1 && egainChat.postChatAttributes ) {
+            var messagePostInterval = setInterval(function(){
+            var message = egainChat.egainChatParameters;
+            egainChat.eglvchathandle.postMessage(message, domain);
+            },1000);
+            window.addEventListener('message',function(event) {
+                if(event.data.chatParametersReceived) {
+                    clearInterval(messagePostInterval);
+                }
+            },false);
+        }
+    }
+    
+    /*To be called by client website. All the parameters specified in eGainLiveConfig must be set here.*/
+    egainChat.storeChatParameters = function(attributeName, attributeValue) {
+    	   egainChat.egainChatParameters[attributeName] = attributeValue;
+    }
+    egainChat.writeIframeIfRequired = function() {
+    	if(egainChat.postChatAttributes  &&  window.navigator.userAgent.indexOf("Trident") != -1 ) {
+    		var iframe = document.createElement('iframe');
+    		iframe.src=egainChat.liveServerURL+'/web/view/live/customer/storeparams.html';
+    		iframe.style.display = 'none';
+    		iframe.name = 'egainChatDomainFrame';
+    		iframe.id = 'egainChatDomainFrame';
+    		document.body.appendChild(iframe);
+    	}
+    }
+    egainChat.writeIframeIfRequired();
+</script>
+<div id="chatbot-content-container" style="display:block">
+	<div id="chatbot-content">
+		<a id="full-view-button" href="#" onclick="egainChat.openHelp()">
+			<span id="open-icon" class="icon-maximize"></span>
+			<span id="open-label">Chat với VPBank</span>
+		</a>
+	</div>
+</div>
+-->
+<!-- END of 1. Add by Nguyen Manh Phu @ integrate CISCO Webchat -->
+
+<!--
+<script type="text/javascript">
+	var __lc = {};
+	__lc.license = 4420081;
+	(function() {
+	    var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+	    lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+	})();
+</script>
+-->
+
+<!-- 1. Add by Nguyen Manh Phu @ integrate CISCO Webchat -->
+
+<script language=javascript>
+    var egainChat = {};
+    egainChat.egainChatParameters = {};
+    //Set to true to enable posting attributes to templates.
+    egainChat.postChatAttributes  = false;
+    egainChat.eglvchathandle = null;
+	   egainChat.liveServerURL = "https://dc-cc-ece-web01.vpbank.com.vn/system";
+    egainChat.openHelp = function() {
+        var domainRegex = /^((?:https?:\/\/)?(?:www\.)?([^\/]+))/i;
+        try{
+            if( egainChat.eglvchathandle != null && egainChat.eglvchathandle.closed == false ){
+                egainChat.eglvchathandle.focus();
+                return;
+            }
+        }
+        catch(err){}
+        var refererName = "";
+        refererName = encodeURIComponent(refererName);
+        var refererurl = encodeURIComponent(document.location.href);
+        var hashIndex = refererurl.lastIndexOf('#');
+        if(hashIndex != -1){
+            refererurl = refererurl.substring(0,hashIndex);
+        }
+        var eglvcaseid = (/eglvcaseid=[0-9]*/gi).exec(window.location.search);
+        var vhtIds = '';
+        if(typeof EGAINCLOUD != "undefined" && EGAINCLOUD.Account.getAllIds)
+        {
+            var ids = EGAINCLOUD.Account.getAllIds();
+            vhtIds = '&aId=' + ids.a + '&sId=' + ids.s +'&uId=' + ids.u;
+        }
+        var EG_CALL_Q = window.EG_CALL_Q || [];
+        EG_CALL_Q.push( ["enableTracker", true] );
+        var eGainChatUrl = egainChat.liveServerURL+'/templates/chat/kiwi/chat.html?&languageCode=vn&countryCode=VN';
+        var domain = domainRegex.exec(eGainChatUrl)[0];
+        if( window.navigator.userAgent.indexOf("Trident") != -1 && egainChat.postChatAttributes ) {
+            var win = document.getElementById('egainChatDomainFrame');
+            win.contentWindow.postMessage(JSON.stringify(egainChat.egainChatParameters), domain);
+        }
+        if( (eGainChatUrl + refererurl).length <= 2000)
+            eGainChatUrl += '&referer='+refererurl;
+        var params = "height=650,width=450,resizable=yes,scrollbars=yes,toolbar=no";
+		   if (egainChat.postChatAttributes)
+		       egainChat.storeChatParameters('eGainChatIdentifier','true');
+        egainChat.eglvchathandle = window.open( eGainChatUrl,'',params)
+        /*Message posted to the child window every second until it sends a message in return. This is done as we can not be sure when the mssage listener will be set in the child window.*/
+        if( window.navigator.userAgent.indexOf("Trident") == -1 && egainChat.postChatAttributes ) {
+            var messagePostInterval = setInterval(function(){
+            var message = egainChat.egainChatParameters;
+            egainChat.eglvchathandle.postMessage(message, domain);
+            },1000);
+            window.addEventListener('message',function(event) {
+                if(event.data.chatParametersReceived) {
+                    clearInterval(messagePostInterval);
+                }
+            },false);
+        }
+    }
+    
+    /*To be called by client website. All the parameters specified in eGainLiveConfig must be set here.*/
+    egainChat.storeChatParameters = function(attributeName, attributeValue) {
+    	   egainChat.egainChatParameters[attributeName] = attributeValue;
+    }
+    egainChat.writeIframeIfRequired = function() {
+    	if(egainChat.postChatAttributes  &&  window.navigator.userAgent.indexOf("Trident") != -1 ) {
+    		var iframe = document.createElement('iframe');
+    		iframe.src=egainChat.liveServerURL+'/web/view/live/customer/storeparams.html';
+    		iframe.style.display = 'none';
+    		iframe.name = 'egainChatDomainFrame';
+    		iframe.id = 'egainChatDomainFrame';
+    		document.body.appendChild(iframe);
+    	}
+    }
+    egainChat.writeIframeIfRequired();
+</script>
+<div id="chatbot-content-container" style="display:block">
+	<div id="chatbot-content">
+		<a id="full-view-button" href="#" onclick="egainChat.openHelp()">
+			<span id="open-icon" class="icon-maximize"></span>
+			<span id="open-label">Chat với VPBank</span>
+		</a>
+	</div>
+</div>
+<!-- END of 1. Add by Nguyen Manh Phu @ integrate CISCO Webchat -->
+	
+</body>
+
+</html>
