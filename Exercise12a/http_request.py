@@ -19,10 +19,11 @@ class HTTPRequest:
         # self.file = open(self.file_name,'r')
         # self.text_response = self.file.read()
         # self.file.close() 
-        matchObj = re.search( r'usd[\s\t\r]*</th>[\s\t\r]*<td>[\s\t\r]*(.*)<div>(.*)[\s\t\r]*(.*)</td>', self.text_response, re.I)
+        search_usd = re.search( r'usd[\s\t\r]*</th>[\s\t\r]*<td>[\s\t\r]*([\d\,]*)<div>([\d\,]*)<div>([\d\,]*)[\s\t\r]*</td>', self.text_response, re.MULTILINE|re.I)
+        search_usd = re.search( r'usd[\s\t\r]*</th>[\s\t\r]*<td>[\s\t\r]*([\d\,]*)<div>([\d\,]*)<div>([\d\,]*)[\s\t\r]*</td>', self.text_response, re.MULTILINE|re.I)
+        search_usd = re.search( r'usd[\s\t\r]*</th>[\s\t\r]*<td>[\s\t\r]*([\d\,]*)<div>([\d\,]*)<div>([\d\,]*)[\s\t\r]*</td>', self.text_response, re.MULTILINE|re.I)
+        
         # matchObj = re.match( r'usd[\s\t\r]*', self.text_response, re.I)
-        if matchObj:
-            print ("matchObj.group() : ", matchObj.group())
-            print ("matchObj.group(1) : ", matchObj.group(1))   
-        else:
-            print ("No match!!")
+        # for match in matches:
+        #     print ("matchObj.group(1) : ", match.group(1))         
+        print('aa')
