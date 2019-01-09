@@ -1,7 +1,5 @@
 import urllib.request
-import shutil
 import tempfile
-import json
 import re
 from xml.dom.minidom import parse, parseString
 from database_manager import DatabaseManager
@@ -25,15 +23,18 @@ class HTTPRequest:
         self.file = open(self.file_name,"w")            
         # self.text_response = response.read().decode("utf-8")        
         time.sleep(3)
-        self.text_response = driver.page_source
-        self.file.write(driver.page_source)            
+        self.text_response = str(driver.page_source.encode("utf-8"))
+        self.file.write(self.text_response)            
         self.file.close()            
                           
     def get_objects_from_text(self):
         self.file = open(self.file_name,'r')
         self.text_response = self.file.read()
         self.file.close() 
-        rows = re.findall( r'([a-zA-Z]{3})[\s\t\r]*</th>[\s\t\r]*<td>[\s\t\r]*([\d\,]*)<div>([\d\,]*)<div>([\d\,]*)[\s\t\r]*</div>', self.text_response, re.MULTILINE|re.I)                
+        # MacOS
+        # rows = re.findall( r'([a-zA-Z]{3})[\s\t\r]*</th>[\s\t\r]*<td>[\s\t\r]*([\d\,]*)<div>([\d\,]*)<div>([\d\,]*)[\s\t\r]*</div>', self.text_response, re.MULTILINE|re.I)    
+        # Windows
+        rows = re.findall( r'([a-zA-Z]{3})[\s\t\r]*</th>[\s\t\r]*\\n[\s\r\t]*<td>\\n[\s\t\r]*([\d\,]*)<div>([\d\,]*)<div>([\d\,]*)[\s\t\r]*</div>', self.text_response, re.MULTILINE|re.I)            
         for row in rows:            
             name = row[0]
             muaTM = float(row[1].replace(',','.'))
